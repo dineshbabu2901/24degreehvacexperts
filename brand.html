@@ -42,6 +42,7 @@
 <meta name="googlebot" content="index,follow">
 <meta name="bingbot" content="index,follow">
 
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -135,6 +136,114 @@
 .client-logo-carousel .owl-nav .owl-prev:hover,
 .client-logo-carousel .owl-nav .owl-next:hover {
     background: var(--dark);
+}
+
+.whatsapp-btn {
+    position: fixed;
+    bottom: 90px;
+    right: 45px;
+    z-index: 99;
+    background-color: #25D366 !important;
+}
+
+/* ===== Mobile / Small Screen Fixes ===== */
+@media (max-width: 768px) {
+    /* Page header: smaller title, tighter padding so it doesn't overflow */
+    .page-header {
+        padding-top: 2rem !important;
+        padding-bottom: 2rem !important;
+    }
+
+    .page-header h1.display-3 {
+        font-size: 2rem;
+    }
+
+    /* Section headings: scale down for narrow screens */
+    h1.display-5 {
+        font-size: 1.6rem;
+    }
+
+    /* Brand cards: reduce padding, keep them from feeling cramped */
+    .brand-item {
+        padding: 20px 12px;
+    }
+
+    .brand-item .brand-icon {
+        width: 55px;
+        height: 55px;
+    }
+
+    .brand-item .brand-icon i {
+        font-size: 22px;
+    }
+
+    /* Client logo strip: smaller tiles on phones */
+    .client-logo-carousel .client-logo-item {
+        height: 90px;
+        margin: 0 6px;
+    }
+
+    .client-logo-carousel .client-logo-item img {
+        max-height: 50px;
+    }
+
+    /* Carousel nav arrows: mobile has no hover, so show them always but smaller
+       and pulled inside so they don't overlap the page edge */
+    .client-logo-carousel .owl-nav {
+        opacity: 1;
+    }
+
+    .client-logo-carousel .owl-nav .owl-prev,
+    .client-logo-carousel .owl-nav .owl-next {
+        width: 32px;
+        height: 32px;
+        font-size: 14px;
+        margin: 0;
+    }
+
+    /* Floating WhatsApp + Back-to-top buttons: smaller and repositioned
+       so they don't overlap each other or crowd the screen edge on phones */
+    .whatsapp-btn {
+        width: 45px !important;
+        height: 45px !important;
+        bottom: 75px;
+        right: 15px;
+        font-size: 18px;
+    }
+
+    .back-to-top {
+        width: 40px !important;
+        height: 40px !important;
+        bottom: 20px !important;
+        right: 15px !important;
+        font-size: 16px;
+    }
+
+    /* Why Choose section: reduce heavy vertical spacing on mobile */
+    .container-fluid.bg-dark.py-5.my-5 {
+        padding-top: 2.5rem !important;
+        padding-bottom: 2.5rem !important;
+        margin-top: 2.5rem !important;
+        margin-bottom: 2.5rem !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .page-header h1.display-3 {
+        font-size: 1.6rem;
+    }
+
+    h1.display-5 {
+        font-size: 1.35rem;
+    }
+
+    .client-logo-carousel .client-logo-item {
+        height: 75px;
+    }
+
+    .client-logo-carousel .client-logo-item img {
+        max-height: 42px;
+    }
 }
 </style>
 </head>
